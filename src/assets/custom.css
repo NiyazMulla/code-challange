@@ -1,0 +1,104 @@
+/* Side bar  */
+.p-sidebar {
+  width: 75%;
+  background: white !important;
+  box-shadow: 3px 3px 6px #00000029;
+  padding: 20px;
+}
+.p-sidebar-content {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.side-bar-scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 80px);
+}
+
+.slider-demo .p-inputtext,
+.slider-demo .p-slider-horizontal {
+  width: 14rem;
+}
+
+.p-slider.p-slider-horizontal {
+  height: 2px;
+}
+.p-slider {
+  position: relative;
+}
+.p-component,
+.p-component * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.p-slider {
+  background: #c1c1c1;
+  border: 0 none;
+  border-radius: 4px;
+}
+.p-slider .p-slider-handle {
+  height: 20px;
+  width: 20px;
+  background: #3f51b5;
+  border: 0 none;
+  border-radius: 50%;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s,
+    background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+.p-slider-horizontal .p-slider-range {
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.p-slider .p-slider-range {
+  background: #3f51b5;
+}
+.p-slider-range {
+  position: absolute;
+  display: block;
+}
+.p-slider .p-slider-handle.p-slider-handle-active {
+  z-index: 2;
+}
+.p-slider.p-slider-horizontal .p-slider-handle {
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.p-slider-horizontal .p-slider-handle {
+  top: 50%;
+}
+.p-slider .p-slider-handle {
+  position: absolute;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -ms-touch-action: none;
+  touch-action: none;
+  display: block;
+  z-index: 1;
+}
+.p-slider .p-slider-handle {
+  transition: transform 0.2s, box-shadow 0.2s;
+  transform: scale(0.7);
+}
+.p-slider.p-slider-horizontal .p-slider-handle {
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.p-slider-horizontal .p-slider-handle {
+  top: 50%;
+}
+.p-slider .p-slider-handle {
+  position: absolute;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -ms-touch-action: none;
+  touch-action: none;
+  display: block;
+  z-index: 1;
+}
+.p-slider .p-slider-handle {
+  transition: transform 0.2s, box-shadow 0.2s;
+  transform: scale(0.7);
+}

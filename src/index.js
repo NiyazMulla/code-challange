@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "./assets/main.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-// import "primereact/resources/themes/nova-light/theme.css";
+// import "primereact/resources/themes/md-dark-indigo/theme.css";
 import "./assets/custom-theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
