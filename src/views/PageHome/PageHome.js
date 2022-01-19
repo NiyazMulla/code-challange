@@ -33,15 +33,10 @@ class PageHome extends Component {
     });
   };
 
-  exportProductList = () => {
-    const { productList } = this.state;
-    let csvContent = "data:text/csv;charset=utf-8,";
-  };
-
   renderProductCards = () => {
     const { productList } = this.state;
-    return productList.length ? (
-      productList
+    if (productList.length) {
+      return productList
         .filter(
           (product) =>
             product.price_rounded <= this.state.range[1] &&
@@ -52,6 +47,7 @@ class PageHome extends Component {
             <div>
               <ProductCard
                 name={data.name}
+                mrp={data.price}
                 price={data.price_rounded}
                 baseImage={data.baseImage}
                 category={data.categories}
@@ -59,10 +55,12 @@ class PageHome extends Component {
               />
             </div>
           );
-        })
-    ) : (
-      <>No Products found</>
-    );
+        });
+    }
+  };
+
+  renderEmptyProductList = () => {
+    return <div>OOPS! Sorry No Proucts</div>;
   };
   render() {
     return (
@@ -94,15 +92,15 @@ class PageHome extends Component {
                 }}
               />
             </div>
-            <div
-              onClick={this.exportProductList}
-              className="bg-red-600 ml-2 rounded-md w-20 text-white font-bold flex items-center cursor-pointer px-inputPaddingH "
-            >
+            <div className="bg-red-600 ml-2 rounded-md w-20 text-white font-bold flex items-center cursor-pointer px-inputPaddingH ">
               <CsvDownload data={this.state.productList}>Export</CsvDownload>
             </div>
           </div>
         </div>
         <div className="px-1 md:px-16 lg:px-32">{this.renderProductCards()}</div>
+        <div className="px-1 md:px-16 lg:px-32">
+          {this.state.productList.length === 0 ? this.renderEmptyProductList() : <></>}
+        </div>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 function ProductCard(props) {
-  const { name, price, baseImage, category, sku } = props;
+  const { name, price, mrp, baseImage, category, sku } = props;
   return (
     <div className="flex flex-col md:flex-row shadow-md mb-2 p-4">
       <div className="w-full md:w-1/4 rounded-xl p-4 md:mr-2 border">
@@ -18,7 +18,12 @@ function ProductCard(props) {
           </div>
         </div>
         <div className="flex flex-row">
-          <div>{price}</div>
+          <div className="text-base font-bold">
+            ₹ {price}
+            <sub className="font-thin ml-2 text-sm text-gray-500">
+              MRP <strike> ₹ {mrp}</strike>
+            </sub>
+          </div>
         </div>
       </div>
     </div>

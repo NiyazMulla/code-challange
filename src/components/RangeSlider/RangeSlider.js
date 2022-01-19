@@ -5,7 +5,7 @@ class RangeSlider extends Component {
     return (
       <div className="flex flex-col">
         <span className="mb-1 text-base ">
-          Min:({this.props.value[0]}) - Max:({this.props.value[1]})
+          Min:(₹ {this.props.value[0]}) - Max:(₹ {this.props.value[1]})
         </span>
         <Slider value={this.props.value5} range {...this.props} />
       </div>
