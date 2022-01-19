@@ -35,7 +35,7 @@ class App extends Component {
               />
               {/* <Redirect from="/" to={linkPage404} /> */}
             </Switch>
-            <Footer />
+            {/* <Footer /> */}
           </React.Suspense>
         </Router>
       </Provider>
